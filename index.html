@@ -314,17 +314,17 @@
         function playAudio() { audio.play(); }
         function stopAudio() { audio.pause(); audio.currentTime = 0; }
 
-        function calculateTotalValue() {
+        function calculateTotalValue_delme() {
             const qty = document.getElementById("quantity").value;
             return (qty * 7.99) + 3.99;
         }
 
-        function calculateTotal() {
+        function calculateTotal_delme() {
             const total = calculateTotalValue();
             document.getElementById("totalDisplay").innerText = "Gesamtbetrag: " + total.toLocaleString('de-DE', {minimumFractionDigits: 2}) + " €";
         }
 
-        function payWithPaypal() {
+        function payWithPaypal_delme() {
             const qty = document.getElementById("quantity").value;
             const color = document.getElementById("color").value;
             const total = calculateTotalValue().toFixed(2);
@@ -333,7 +333,7 @@
             window.open(paypalUrl, '_blank');
         }
 
-        function sendInquiry() {
+        function sendInquiry_delme() {
             const name = document.getElementById("name").value;
             const addr = document.getElementById("address").value;
             if(!name || !addr) { alert("Bitte Name und Adresse angeben."); return; }
